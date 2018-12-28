@@ -1,5 +1,7 @@
 <?php
 
+$none = 'None selected';
+
 // Head for all HTML files inside controller
 session_start();
 require_once 'view/_head.php';
@@ -9,7 +11,7 @@ require_once 'backend.php';
 $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 if (!isset($_SESSION['device'])){
-    $_SESSION['device'] = 'None selected';
+    $_SESSION['device'] = $none;
 }
 
 

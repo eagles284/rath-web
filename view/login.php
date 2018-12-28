@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_SESSION['login'])) {
-    header('Location: panel');
+    header('Location: portal');
 }
 
 $loginerror = FALSE;
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
         if (isset($_POST['remember'])):
             setcookie('user', md5($user), time() + (86400 * 7));
         endif;
-        header('Location: panel');
+        header('Location: portal');
     } else {
         $loginerror = TRUE;
     }
