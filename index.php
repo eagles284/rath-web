@@ -14,7 +14,6 @@ if (!isset($_SESSION['device'])){
     $_SESSION['device'] = $none;
 }
 
-
 // Controller logic
 if (isset($_GET['url'])){
     $url = $_GET['url'];
@@ -41,6 +40,7 @@ if (isset($_GET['url'])){
         }
     }
     if ( !isset($_SESSION['login']) && ($url != 'login') ){
+        $_SESSION['url'] = $url;
         header('Location: login');
     }
 

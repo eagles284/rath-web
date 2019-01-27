@@ -75,6 +75,14 @@ if ($_SESSION['device'] != $none):
         </tr>
     <?php endforeach; ?>
     </tbody>
+</table>
+
+<br>
+
+<h4><b>Latest Snapshot </b><button id="showbutton2" class="btn btn-info" onclick="showSnapshot()">show</button></h4>
+<div id="snapshot">
+    <img src="<?=$mydevice['snapshot_url']?>" class="img-fluid" alt="Responsive image">
+</div>
 
 <?php
 else: 
@@ -85,19 +93,31 @@ endif;
 <script>
 
 var wifiTable = document.getElementById('wifitable');
-wifiTable.style.display = "none";
-
 var showButton = document.getElementById('showbutton');
-var scrollPos = element.scrollTop;
-
+wifiTable.style.display = "none";
 function showWifi()
 {
     if (wifiTable.style.display === "none"){
         wifiTable.style.display = "block";
-        showButton.innerHTML = 'hide'
+        showButton.innerHTML = 'hide';
     } else {
         wifiTable.style.display = "none";
-        showButton.innerHTML = 'show'
+        showButton.innerHTML = 'show';
+    }
+}
+
+
+var snapshot = document.getElementById('snapshot');
+var showButton2 = document.getElementById('showbutton2');
+snapshot.style.display = "none";
+function showSnapshot()
+{
+    if (snapshot.style.display === "none") {
+        snapshot.style.display = "block";
+        showButton2.innerHTML = 'hide';
+    } else {
+        snapshot.style.display = "none";
+        showButton2.innerHTML = 'show';
     }
 }
 

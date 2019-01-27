@@ -31,7 +31,12 @@ if (isset($_POST['submit'])) {
         if (isset($_POST['remember'])):
             setcookie('user', md5($user), time() + (86400 * 7));
         endif;
-        header('Location: portal');
+
+        if (isset($_SESSION['url'])):
+            header('Location: '.$_SESSION['url']);
+        else:
+            header('Location: panel');
+        endif;
     } else {
         $loginerror = TRUE;
     }
