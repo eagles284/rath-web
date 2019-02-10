@@ -15,9 +15,9 @@ if(isset($_GET['device'])) {
 </div>
 
 <div class="w3-main" style="margin-left:320px; margin-top: 50px;" id="konten">
-<div class="container">
+    <div class="container">
 
-    <?php 
+        <?php 
     if (isset($_GET['mode'])) {
         $mode = $_GET['mode'];
 
@@ -31,15 +31,15 @@ if(isset($_GET['device'])) {
 
         <img src="_res/pc-panel-2.jpg" class="img-fluid pcp" alt="Responsive image">
 
-    <?php } ?>
+        <?php } ?>
 
-</div>
+    </div>
 </div>
 
 <script>
 function w3_toggle() {
     status = document.getElementById("mySidebar").style.display;
-    if (status === 'block'){
+    if (status === 'block') {
         status = document.getElementById("mySidebar").style.display = "none";
     } else {
         status = document.getElementById("mySidebar").style.display = "block";
