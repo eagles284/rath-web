@@ -19,15 +19,15 @@ if (isset($_SESSION['sucess_redit'])){
             <li>The synonims must be seperated with commas.</li>
             <p>Example:
                 <div class="alert alert-dark" role="alert">
-                    bully, insult, offend
+                    bully,insult,offend
                 </div>
             </p>
             </li>
             <li>Seperate different contexts with a new line (Enter).</li>
             <p>Example:
                 <div class="alert alert-dark" role="alert">
-                    bully, insult, offend <br>
-                    destroy, crash, crush
+                    bully,insult,offend<br>
+                    destroy,crash,crush,bang
                 </div>
             </p>
             </li>

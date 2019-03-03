@@ -29,13 +29,13 @@ if (isset($_POST['submit'])) {
         $_SESSION['login'] = md5($user);
 
         if (isset($_POST['remember'])):
-            setcookie('user', md5($user), time() + (86400 * 7));
+            setcookie('user', md5($user), time() + (86400 * 3));
         endif;
 
         if (isset($_SESSION['url'])):
             header('Location: '.$_SESSION['url']);
         else:
-            header('Location: panel');
+            header('Location: portal');
         endif;
     } else {
         $loginerror = TRUE;
@@ -44,13 +44,14 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<body>
+
+<body style=>
     <div class="container">
     <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="margin-top: 5%; padding:5px;">
         <div class="card card-signin my-5">
             <div class="card-body">
-            <h5 class="card-title text-center">Login</h5>
+            <h5 class="card-title text-center"><b>Login with RATH Account</b></h5>
             <form class="form-signin" action='login' method='POST'>
                 <div class="form-label-group">
                 <input name='username' type="text" id="inputEmail" class="form-control" placeholder="Username" required autofocus>

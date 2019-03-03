@@ -53,9 +53,9 @@
 
                 <h4><b>Pro Features Activated</b></h4>
                 <ul>
-                    <li>Auto Multi Language Support</li>
+                    <li>Unlimited Words per Check</li>
+                    <li>Auto Multi Language Check</li>
                     <li>Comprehensive & In Depth Analysis</li>
-                    <li>Check for More than 1000 Words</li>
                 </ul>
 
                 <br>

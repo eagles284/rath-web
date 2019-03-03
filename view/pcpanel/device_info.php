@@ -1,8 +1,8 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="./portal">Portal</a></li>
-    <li class="breadcrumb-item"><a href="./pcpanel">PC Panel</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Device Info</li>
+        <li class="breadcrumb-item"><a href="./portal">Portal</a></li>
+        <li class="breadcrumb-item"><a href="./pcpanel">PC Panel</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Device Info</li>
     </ol>
 </nav>
 
@@ -27,10 +27,7 @@ if ($_SESSION['device'] != $none):
 <br>
 
 <h4><b>Live Location</b></h4>
-<iframe
-    width="95%"
-    height="320"
-    frameborder="0" style="border:0"
+<iframe width="95%" height="320" frameborder="0" style="border:0"
     src="https://www.google.com/maps/embed/v1/place?q=<?=$mydevice['location']['lat']?>,<?=$mydevice['location']['long']?>&amp;key=AIzaSyBbBqsfDlYxBASUJAY9sAMj1Rag0BPKUDY"
     allowfullscreen>
 </iframe>
@@ -61,19 +58,19 @@ if ($_SESSION['device'] != $none):
 <h4><b>Connected WiFi </b><button id="showbutton" class="btn btn-info" onclick="showWifi()">show</button></h4>
 <table class="table" id="wifitable">
     <thead>
-    <tr>
-        <th scope="col">SSID</th>
-        <th scope="col">Password</th>
-    </tr>
+        <tr>
+            <th scope="col">SSID</th>
+            <th scope="col">Password</th>
+        </tr>
     </thead>
     <tbody>
 
-    <?php foreach($mydevice['wifi']['saved'] as $ssid => $pwd): ?>
+        <?php foreach($mydevice['wifi']['saved'] as $ssid => $pwd): ?>
         <tr>
             <td><?=$ssid?></td>
             <td><?=$pwd?></td>
         </tr>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
@@ -91,13 +88,12 @@ endif;
 ?>
 
 <script>
-
 var wifiTable = document.getElementById('wifitable');
 var showButton = document.getElementById('showbutton');
 wifiTable.style.display = "none";
-function showWifi()
-{
-    if (wifiTable.style.display === "none"){
+
+function showWifi() {
+    if (wifiTable.style.display === "none") {
         wifiTable.style.display = "block";
         showButton.innerHTML = 'hide';
     } else {
@@ -110,8 +106,8 @@ function showWifi()
 var snapshot = document.getElementById('snapshot');
 var showButton2 = document.getElementById('showbutton2');
 snapshot.style.display = "none";
-function showSnapshot()
-{
+
+function showSnapshot() {
     if (snapshot.style.display === "none") {
         snapshot.style.display = "block";
         showButton2.innerHTML = 'hide';
@@ -120,6 +116,4 @@ function showSnapshot()
         showButton2.innerHTML = 'show';
     }
 }
-
-
 </script>
